@@ -1,8 +1,8 @@
 .title_bold{
     font-size: 25px;
     font-weight: bolder;
-    font-family: cursive;
-    text-shadow: 4px 3px rgb(238, 238, 238);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* text-shadow: 4px 3px rgb(238, 238, 238); */
 }
 
 .Banner-Text{
