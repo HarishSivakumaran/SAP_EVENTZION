@@ -11,6 +11,7 @@ import {
   } from 'cdbreact';
 import { NavLink } from 'react-router-dom';
 import "./style.css";
+import EventCalendar from './EventCalendar';
 
 const Sidebar = () => {
     return (
@@ -46,8 +47,8 @@ const Sidebar = () => {
     </div>
   </CDBSidebarFooter>
 </CDBSidebar>
-<div>
-  content
+<div className="App px-5">
+<EventCalendar/>
 </div>
 </div>
 
