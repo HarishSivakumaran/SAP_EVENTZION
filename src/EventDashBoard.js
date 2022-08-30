@@ -35,7 +35,7 @@ const EventDashBoard = () => {
           <NewEvent />
         </div>
         <div className="col">
-          <EventCard title="Edward Spencer &" subtitle="Jessica Wedding Party" partCount="50" icon="https://www.svgrepo.com/show/402898/wedding.svg" dueDate="25th July" progress="25%"/>
+          <EventCard title="Picture in Pixel" subtitle="" partCount="50" icon="https://www.svgrepo.com/show/2943/picture.svg" dueDate="10th September" progress="25%"/>
         </div>
         <div className="col">
           <EventCard title="Basketball match" subtitle="MetLife Stadium" partCount="7" icon="https://www.svgrepo.com/show/3161/basketball.svg" dueDate="16th September" progress="70%"/>
@@ -46,13 +46,13 @@ const EventDashBoard = () => {
       </div>
       <div className="row mx-3">
         <div className="col">
-          <EventCard />
+          <EventCard title="The Mad Ad show" subtitle="" partCount="7" icon="https://www.svgrepo.com/show/33886/playing.svg" dueDate="18th September" progress="70%" />
         </div>
         <div className="col">
-          <EventCard />
+          <EventCard title="Virtual Beat Studio" subtitle="" partCount="7" icon="https://www.svgrepo.com/show/69786/music.svg" dueDate="25th September" progress="70%" />
         </div>
         <div className="col">
-          <EventCard />
+          <EventCard title="Bingo" subtitle="" partCount="7" icon="https://www.svgrepo.com/show/422187/activity-bingo-family.svg" dueDate="30th September" progress="70%" />
         </div>
         <div className="col">
           <EventCard />

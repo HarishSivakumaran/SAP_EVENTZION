@@ -1,10 +1,11 @@
 import React from "react";
 
 const EventCard = ({
-  title = "Friday Movie Night",
-  subtitle = "Party with Bo and others",
+  title = "Escape Room",
+  subtitle = "know your peers",
   partCount = "10",
-  icon = "https://www.svgrepo.com/show/241586/popcorn.svg",
+  icon = "https://www.svgrepo.com/show/307794/exit-door-run-escape.svg",
+  // icon = "https://www.svgrepo.com/show/241586/popcorn.svg",
   dueDate = "Tomorrow",
   progress = "75%"
 }) => {
