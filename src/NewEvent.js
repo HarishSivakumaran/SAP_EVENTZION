@@ -10,7 +10,7 @@ const NewEvent = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [value, setValue] = React.useState([20, 37]);
+  const [value, setValue] = React.useState([20, 70]);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -72,7 +72,7 @@ const NewEvent = () => {
               <Form.Label>Age Group</Form.Label>
               <Slider
                 getAriaLabel={() => "Temperature range"}
-                value={[20,60]}
+                value={value}
                 onChange={handleChange}
                 valueLabelDisplay="auto"
                 className="mx-1"
