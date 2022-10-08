@@ -3,8 +3,8 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 const EventSuggestions = () => {
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Header>Recent popular events</Card.Header>
+    <Card style={{ width: '18rem', backgroundColor:"#ffc000" }}>
+      <Card.Header className='h5'>Recent popular events</Card.Header>
       <ListGroup variant="flush">
         <ListGroup.Item>Pictionary</ListGroup.Item>
         <ListGroup.Item>Google Feud</ListGroup.Item>

@@ -32,7 +32,7 @@ const NewEvent = () => {
         <Modal.Header closeButton>
           <Modal.Title
             className="text-warning text-center"
-            style={{ fontSize: "25px", fontWeight: "bolder"}}
+            style={{ fontSize: "25px", fontWeight: "bolder" }}
           >
             Plan your event
           </Modal.Title>
@@ -45,6 +45,7 @@ const NewEvent = () => {
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Event Name</Form.Label>
               <Form.Control
+                required
                 style={{
                   border: 0,
                   outline: 0,
@@ -57,6 +58,7 @@ const NewEvent = () => {
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Email address</Form.Label>
               <Form.Control
+                required
                 style={{
                   border: 0,
                   outline: 0,
@@ -75,7 +77,7 @@ const NewEvent = () => {
               >
                 <div className="container" style={{ fontWeight: "normal" }}>
                   <input type="radio" value="Crp" name="gender" /> Corporate
-                  Event{" "}(Formal)
+                  Event (Formal)
                 </div>
                 <div className="container" style={{ fontWeight: "normal" }}>
                   <input type="radio" value="fp" name="gender" /> Funparty
@@ -106,11 +108,16 @@ const NewEvent = () => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={()=>{setShow(false)}}>
+          <Button
+            variant="secondary"
+            onClick={() => {
+              setShow(false);
+            }}
+          >
             Close
           </Button>
           <Button
-            variant="primary"
+            variant="primary" 
             onClick={() => {
               navigate("/newEvent");
             }}

@@ -18,17 +18,17 @@ import EventSuggestions from "./EventSuggestions";
 const Sidebar = () => {
     return (
 //this js contains sidebar component on activity screen.
-<div style={{ display: 'flex', height: '75vh', overflow: 'scroll initial' }}>
-<CDBSidebar textColor="#333" backgroundColor="#f0f0f0">
-  <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
-    <a href="/" className="text-decoration-none" style={{ color: 'inherit' }}>
+<div style={{ display: 'flex', height: '35vh', overflow: 'scroll initial' }}>
+<CDBSidebar textColor="#333" backgroundColor="#ffc000">
+  <CDBSidebarHeader style={{backgroundColor: "#252525", color: "white"}} prefix={<i className="fa fa-bars fa-large"></i>}>
+    <a href="/" className="text-decoration-none h3" style={{ color: 'white' }}>
       Activities
     </a>
   </CDBSidebarHeader>
   <CDBSidebarContent>
     <CDBSidebarMenu>
     <CDBSidebarMenuItem icon="home" >
-                Home
+                <NavLink to="/">Home</NavLink>
               </CDBSidebarMenuItem>
               <CDBSidebarMenuItem icon="plus" >
                 add
@@ -45,11 +45,10 @@ const Sidebar = () => {
         padding: '20px 5px',
       }}
     >
-      Sidebar Footer
     </div>
   </CDBSidebarFooter>
 </CDBSidebar>
-<div className="App px-5">
+<div className="App px-5" >
 <EventSchedular/>
 </div>
 <div className="App px-10">
