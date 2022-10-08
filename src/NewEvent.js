@@ -28,19 +28,40 @@ const NewEvent = () => {
       <a className="bi bi-plus-circle h1 text-primary m-3"></a>
       <h2 className="text-primary">Add New Event</h2>
 
-      <Modal show={show} onHide={handleClose} centered >
-        <Modal.Header closeButton> 
-          <Modal.Title className="text-warning">Plan your event</Modal.Title>
+      <Modal show={show} onHide={handleClose} centered>
+        <Modal.Header closeButton>
+          <Modal.Title
+            className="text-warning text-center"
+            style={{ fontSize: "25px", fontWeight: "bolder"}}
+          >
+            Plan your event
+          </Modal.Title>
         </Modal.Header>
-        <Modal.Body style={{backgroundColor: '#2a6ac8'}} className="text-light h5">
-          <Form>
+        <Modal.Body
+          // style={{ backgroundColor: "grey" }}
+          className="text-dark h5"
+        >
+          <Form className="px-2">
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Event Name</Form.Label>
-              <Form.Control type="input" placeholder="Event Name" autoFocus />
+              <Form.Control
+                style={{
+                  border: 0,
+                  outline: 0,
+                  borderBottom: "2px solid #1890ff",
+                }}
+                placeholder="Event Name"
+                autoFocus
+              />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Email address</Form.Label>
               <Form.Control
+                style={{
+                  border: 0,
+                  outline: 0,
+                  borderBottom: "2px solid #1890ff",
+                }}
                 type="email"
                 placeholder="name@example.com"
                 autoFocus
@@ -52,18 +73,18 @@ const NewEvent = () => {
                 className="container justify-content-around"
                 onChange={(test) => 1}
               >
-                <div className="container" style={{fontWeight: 'normal'}}>
+                <div className="container" style={{ fontWeight: "normal" }}>
                   <input type="radio" value="Crp" name="gender" /> Corporate
-                  Event(Formal)
+                  Event{" "}(Formal)
                 </div>
-                <div className="container" style={{fontWeight: 'normal'}}>
+                <div className="container" style={{ fontWeight: "normal" }}>
                   <input type="radio" value="fp" name="gender" /> Funparty
                 </div>
-                <div className="container" style={{fontWeight: 'normal'}}>
+                <div className="container" style={{ fontWeight: "normal" }}>
                   <input type="radio" value="TBA" name="gender" /> Team building
                   Activity
                 </div>
-                <div className="container" style={{fontWeight: 'normal'}}>
+                <div className="container" style={{ fontWeight: "normal" }}>
                   <input type="radio" value="Other" name="gender" /> Other
                 </div>
               </div>
@@ -77,18 +98,23 @@ const NewEvent = () => {
                 valueLabelDisplay="auto"
                 className="mx-1"
                 sx={{
-                    color: 'white',
-                  }}
+                  color: "#1890ff",
+                }}
                 // getAriaValueText={valuetext}
               />
             </Form.Group>
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" onClick={()=>{setShow(false)}}>
             Close
           </Button>
-          <Button variant="primary" onClick={() => {navigate('/newEvent');}}>
+          <Button
+            variant="primary"
+            onClick={() => {
+              navigate("/newEvent");
+            }}
+          >
             Continue
           </Button>
         </Modal.Footer>

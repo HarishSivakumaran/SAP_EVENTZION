@@ -28,7 +28,23 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+.SVG{
+  width: 80%;
+}
+.SVG1{
+  width: 70%;
+  height: 70%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Form-Input{
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid #1890ff;
+}
+
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -37,4 +53,4 @@
   }
 }
 
-@import 'react-calendar/dist/Calendar.css';
+@import 'react-calendar/dist/Calendar.css'; */
