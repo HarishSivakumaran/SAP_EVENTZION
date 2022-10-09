@@ -20,7 +20,7 @@ const WelcomeBanner = () => {
               Welcome Back, <span className="text-warning bold-text">Johnathan </span> !
             </h1>
             <span className="text-light text-start Banner-subtext">
-              You have <span className="text-warning">2 Events</span> in Process
+              You have <span className="text-warning">7 Events</span> in Process
             </span>
             <div className="Banner-subtext">Let's get the fun started</div>
           </div>

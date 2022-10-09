@@ -10,10 +10,13 @@ const NewEvent = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [value, setValue] = React.useState([20, 70]);
+  const [value, setValue] = React.useState([30, 60]);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const [EvenName, setEventName] = useState("");
+
   return (
     <div
       className="card btn justify-content-center align-items-center p-5 m-2"
@@ -53,6 +56,9 @@ const NewEvent = () => {
                 }}
                 placeholder="Event Name"
                 autoFocus
+                onChange={(e) => {
+                  setEventName(e.target.value);
+                }}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -97,7 +103,7 @@ const NewEvent = () => {
                 getAriaLabel={() => "Temperature range"}
                 value={value}
                 onChange={handleChange}
-                valueLabelDisplay="auto"
+                valueLabelDisplay="on"
                 className="mx-1"
                 sx={{
                   color: "#1890ff",
@@ -117,9 +123,14 @@ const NewEvent = () => {
             Close
           </Button>
           <Button
-            variant="primary" 
+            type="submit"
+            variant="primary"
             onClick={() => {
-              navigate("/newEvent");
+              if (EvenName === "") {
+                alert("Please give a name to the event !");
+                return;
+              }
+              navigate("/newEvent/" + EvenName);
             }}
           >
             Continue

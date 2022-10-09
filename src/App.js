@@ -23,7 +23,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/newEvent" element={<AddNewEvent />} />
+        <Route path="/newEvent/:EventName" element={<AddNewEvent />} />
       </Routes>
     </Router>
   );

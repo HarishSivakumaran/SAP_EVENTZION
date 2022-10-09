@@ -19,9 +19,13 @@ import ActivitiesList from "./Components/ActivitiesList";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
+  const [schedulerData, setSchedulerData] = useState([]);
+
   return (
     //this js contains sidebar component on activity screen.
-    <ActivityContext.Provider value={{open, setOpen}}>
+    <ActivityContext.Provider
+      value={{ open, setOpen, schedulerData, setSchedulerData }}
+    >
       <ActivitiesList />
       <div
         style={{ display: "flex", height: "35vh", overflow: "scroll initial" }}
@@ -31,29 +35,29 @@ const Sidebar = () => {
             style={{ backgroundColor: "#252525", color: "white" }}
             prefix={<i className="fa fa-bars fa-large"></i>}
           >
-            <a
-              href="/"
+            <Link
+              to="/"
               className="text-decoration-none h4"
               style={{ color: "white" }}
             >
               Activities
-            </a>
+            </Link>
           </CDBSidebarHeader>
           <CDBSidebarContent className="h5">
             <CDBSidebarMenu>
               <CDBSidebarMenuItem icon="home">
                 <NavLink to="/">Home</NavLink>
               </CDBSidebarMenuItem>
-              <CDBSidebarMenuItem icon="plus">
+              <CDBSidebarMenuItem icon="gamepad">
                 <div
                   onClick={() => {
                     setOpen(true);
                   }}
                 >
-                  add
+                  Activities
                 </div>
               </CDBSidebarMenuItem>
-              <CDBSidebarMenuItem icon="gamepad">Activities</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="plus">Add</CDBSidebarMenuItem>
             </CDBSidebarMenu>
           </CDBSidebarContent>
         </CDBSidebar>
