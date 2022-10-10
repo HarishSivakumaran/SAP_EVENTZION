@@ -8,6 +8,7 @@ const ActivityInfo = ({
   image = "https://images.pexels.com/photos/4940096/pexels-photo-4940096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   title = "♠ Poker Night ♦",
   desc = "Poker is a family of comparing card games in which players wager over which hand is best according to that specific game's rules in ways similar to these rankings.",
+  custom = false,
 }) => {
   const [show, setShow] = useState(false);
   const { schedulerData, setSchedulerData, setOpen } =
@@ -16,6 +17,7 @@ const ActivityInfo = ({
     startDate: "",
     endDate: "",
     title: title,
+    url: "",
   };
 
   var date = "";
@@ -61,8 +63,26 @@ const ActivityInfo = ({
               <div className="card-body">
                 <h1 className="card-title">{title}</h1>
                 <h5 className="ms-2" style={{ fontFamily: "cursive" }}>
-                  {desc}
+                  {custom ? "" : desc}
                 </h5>
+                <form
+                  style={{ display: custom ? "block" : "none" }}
+                  className="px-2 py-4"
+                >
+                  <label style={{ fontWeight: "bolder" }} for="EventDayURL">
+                    Activity Name :{" "}
+                  </label>
+                  <input
+                    className="ms-4 Form-Input"
+                    type="text"
+                    id="EventDayURL"
+                    name="EventDayURL"
+                    placeholder="Enter Activity Name"
+                    onChange={(e) => {
+                      actScheduler.title = e.target.value;
+                    }}
+                  />
+                </form>
                 <form className="px-2 py-4">
                   <label style={{ fontWeight: "bolder" }} for="EventDay">
                     Activity's Date:{" "}
@@ -102,6 +122,24 @@ const ActivityInfo = ({
                     name="EventDayDate"
                     onChange={(e) => {
                       actScheduler.endDate = date + "T" + e.target.value;
+                    }}
+                  />
+                </form>
+                <form
+                  style={{ display: custom ? "block" : "none" }}
+                  className="px-2 py-4"
+                >
+                  <label style={{ fontWeight: "bolder" }} for="EventDayURL">
+                    Activity URL:{" "}
+                  </label>
+                  <input
+                    className="ms-4 Form-Input"
+                    type="url"
+                    id="EventDayURL"
+                    name="EventDayURL"
+                    placeholder="Enter your URL"
+                    onChange={(e) => {
+                      actScheduler.url = e.target.value;
                     }}
                   />
                 </form>

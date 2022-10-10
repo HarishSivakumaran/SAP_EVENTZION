@@ -28,7 +28,7 @@ const Sidebar = () => {
     >
       <ActivitiesList />
       <div
-        style={{ display: "flex", height: "35vh", overflow: "scroll initial" }}
+        style={{ display: "flex", height: "28vh", overflow: "scroll initial" }}
       >
         <CDBSidebar textColor="#333" backgroundColor="#ffc000">
           <CDBSidebarHeader
@@ -57,7 +57,6 @@ const Sidebar = () => {
                   Activities
                 </div>
               </CDBSidebarMenuItem>
-              <CDBSidebarMenuItem icon="plus">Add</CDBSidebarMenuItem>
             </CDBSidebarMenu>
           </CDBSidebarContent>
         </CDBSidebar>
